@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moj Kragujevac — priča o gradu šumadijskog srca, prvoj prestonici moderne Srbije, gradu gimnazije, arsenala, Šumarica i Velikog parka.">
+    <meta name="keywords" content="Kragujevac, Šumadija, prestonica, gimnazija, Šumarice, Stari arsenal, Veliki park, Moj Kragujevac">
+    <meta property="og:title" content="Moj Kragujevac — Srce Šumadije">
+    <meta property="og:description" content="Otkrijte priču o gradu koji je bio prva prestonica moderne Srbije.">
+    <meta property="og:image" content="images/hero-kragujevac.jpg">
+    <title>Moj Kragujevac — Srce Šumadije</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ───────── NAVIGATION ───────── -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#" class="nav__brand">
+                <img src="images/logo.png" alt="Moj Kragujevac" class="nav__logo">
+                <span class="nav__brand-text">
+                    <span class="nav__brand-line">Moj</span>
+                    <span class="nav__brand-line nav__brand-line--accent">Kragujevac</span>
+                </span>
+            </a>
+
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#o-gradu">O gradu</a></li>
+                <li><a href="#istorija">Istorija</a></li>
+                <li><a href="#znamenitosti">Znamenitosti</a></li>
+                <li><a href="#sumarice">Šumarice</a></li>
+                <li><a href="#galerija">Galerija</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+
+            <a href="https://instagram.com/moj.kragujevac" target="_blank" rel="noopener" class="nav__cta">
+                <span>@moj.kragujevac</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+
+            <button class="nav__burger" id="navBurger" aria-label="Meni">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ───────── HERO ───────── -->
+    <header class="hero">
+        <div class="hero__bg" style="background-image: url('images/hero-kragujevac.jpg');"></div>
+        <div class="hero__overlay"></div>
+
+        <div class="hero__content">
+            <div class="hero__eyebrow">
+                <span class="hero__eyebrow-line"></span>
+                <span class="hero__eyebrow-text">Šumadija · Centralna Srbija · Est. 1476</span>
+            </div>
+
+            <h1 class="hero__title">
+                <span class="hero__title-word" data-delay="0">Kra</span><span class="hero__title-word" data-delay="0.05">gu</span><span class="hero__title-word" data-delay="0.1">je</span><span class="hero__title-word" data-delay="0.15">vac</span>
+            </h1>
+
+            <p class="hero__subtitle"><em>Srce Šumadije</em> &middot; grad koji pamti, čuva i pripoveda</p>
+
+            <div class="hero__meta">
+                <div class="hero__meta-item">
+                    <span class="hero__meta-num">44.01°</span>
+                    <span class="hero__meta-label">Sev. geo. širina</span>
+                </div>
+                <div class="hero__meta-item">
+                    <span class="hero__meta-num">20.91°</span>
+                    <span class="hero__meta-label">Ist. geo. dužina</span>
+                </div>
+                <div class="hero__meta-item">
+                    <span class="hero__meta-num">185 m</span>
+                    <span class="hero__meta-label">Nadmorska visina</span>
+                </div>
+                <div class="hero__meta-item">
+                    <span class="hero__meta-num">~150k</span>
+                    <span class="hero__meta-label">Stanovnika</span>
+                </div>
+            </div>
+
+            <a href="#o-gradu" class="hero__scroll">
+                <span>Skrolujte</span>
+                <svg viewBox="0 0 24 40" width="20" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="36" rx="10"/>
+                    <line x1="12" y1="10" x2="12" y2="18" class="hero__scroll-dot"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="hero__corner hero__corner--tl">N 44°00′</div>
+        <div class="hero__corner hero__corner--tr">E 20°55′</div>
+        <div class="hero__corner hero__corner--bl">№ 01</div>
+        <div class="hero__corner hero__corner--br">Šumadijski okrug</div>
+    </header>
+
+   
+
+    <!-- ───────── O GRADU ───────── -->
+    <section class="intro" id="o-gradu">
+        <div class="intro__container">
+            <div class="intro__header">
+                <span class="section__chapter">I — Uvod</span>
+                <h2 class="section__title">Prestonica<br><em>koja je</em> stvorila<br>Srbiju</h2>
+            </div>
+
+            <div class="intro__body">
+                <p class="intro__lead"><span class="dropcap">K</span>ragujevac nije samo grad — Kragujevac je rečenica iz koje je započeta sva moderna srpska država. Smešten u plodnoj kotlini reke Lepenice, okružen brežuljcima Šumadije, ovaj grad od skromnih turskih beleški iz 1476. godine prerastao je u prvu prestonicu obnovljene Srbije, u kojoj su rođene najvažnije institucije, ideje i ustanove srpskoga naroda.</p>
+
+                <p>Ovde je 1818. godine knez Miloš preneo svoju prestonicu. Ovde je 1833. otvorena <strong>prva gimnazija</strong>, prva apoteka, prva profesionalna pozorišna predstava i prva štamparija u kneževini. Ovde je <strong>15. februara 1835.</strong> donet <strong>Sretenjski ustav</strong> — jedan od najnaprednijih ustavnih akata svoga vremena, dokument koji je Srbiju prvi put proglasio uređenom državom sa podelom vlasti i ukidanjem feudalnog ropstva.</p>
+
+                <p>Kragujevac je grad u kome se istorija ne čuva pod staklom — istorija se ovde i danas oseća na svakom ćošku: u rozim fasadama Knez Mihailove ulice, u tihim alejama Velikog parka, u opekama starog Arsenala, u mermernom <em>V</em>-u Šumarica koji prkosi nebu.</p>
+
+                <div class="intro__pullquote">
+                    <span class="quote-mark">«</span>
+                    Kragujevac je prva varoš u kojoj je Srbija postala moderna država — pre nego što je i sama znala da je to.
+                    <span class="intro__pullquote-attr">— iz savremene istoriografije</span>
+                </div>
+            </div>
+
+            <aside class="intro__stats">
+                <div class="stat">
+                    <span class="stat__num"><span data-count="1818">1818</span></span>
+                    <span class="stat__label">Godina kada Kragujevac postaje prestonica Kneževine Srbije</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num"><span data-count="1833">1833</span></span>
+                    <span class="stat__label">Osnivanje Knjažesko-srpske gimnazije, prve u zemlji</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num"><span data-count="1835">1835</span></span>
+                    <span class="stat__label">Donošenje Sretenjskog ustava na Velikoj narodnoj skupštini</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num"><span data-count="1976">1976</span></span>
+                    <span class="stat__label">Osnivanje Univerziteta u Kragujevcu</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- ───────── ISTORIJA TIMELINE ───────── -->
+    <section class="timeline" id="istorija">
+        <div class="timeline__container">
+            <div class="timeline__header">
+                <span class="section__chapter">II — Hronologija</span>
+                <h2 class="section__title">Pet vekova<br><em>upisanih</em> u kamen</h2>
+                <p class="section__deck">Od prvih turskih deftera do savremenog univerzitetskog grada — Kragujevac je hronika u koju je upisano pet stoleća srpske istorije.</p>
+            </div>
+
+            <div class="timeline__track">
+                <div class="timeline__line"></div>
+
+                <article class="t-item">
+                    <span class="t-item__year">1476</span>
+                    <h3 class="t-item__title">Prvi pomen</h3>
+                    <p>U turskim defterima Smederevskog sandžaka po prvi put se beleži ime <em>Kragujevac</em> kao malo selo u plodnoj dolini Lepenice.</p>
+                </article>
+
+                <article class="t-item">
+                    <span class="t-item__year">1818</span>
+                    <h3 class="t-item__title">Prestonica Srbije</h3>
+                    <p>Knez Miloš Obrenović prenosi prestonicu Kneževine Srbije iz Crnuće u Kragujevac. Grad postaje politički i administrativni centar zemlje.</p>
+                </article>
+
+                <article class="t-item">
+                    <span class="t-item__year">1833</span>
+                    <h3 class="t-item__title">Gimnazija i štamparija</h3>
+                    <p>Otvara se Knjažesko-srpska gimnazija — prva srednja škola u Srbiji. Iste godine počinje rad prve štamparije, čiji prvi proizvod je <em>Novine srpske</em>.</p>
+                </article>
+
+                <article class="t-item t-item--highlight">
+                    <span class="t-item__year">1835</span>
+                    <h3 class="t-item__title">Sretenjski ustav</h3>
+                    <p>Na praznik Sretenja Gospodnjeg, na Velikoj narodnoj skupštini u Kragujevcu, donet je prvi srpski ustav — jedan od najliberalnijih u tadašnjoj Evropi.</p>
+                </article>
+
+                <article class="t-item">
+                    <span class="t-item__year">1851</span>
+                    <h3 class="t-item__title">Knjaževsko-srpski arsenal</h3>
+                    <p>Osnovana je prva fabrika oružja u Srbiji — preteča kasnije „Zastave" i jezgro srpske vojne industrije.</p>
+                </article>
+
+                <article class="t-item t-item--dark">
+                    <span class="t-item__year">1941</span>
+                    <h3 class="t-item__title">Šumarice — 21. oktobar</h3>
+                    <p>U najtragičnijem danu u istoriji grada, nemački okupator vrši masovno streljanje. Ubijeno je oko <strong>2.800</strong> civila, među kojima i učenici kragujevačke gimnazije.</p>
+                </article>
+
+                <article class="t-item">
+                    <span class="t-item__year">1953</span>
+                    <h3 class="t-item__title">Crvena Zastava</h3>
+                    <p>Iz Vojno-tehničkog zavoda razvija se „Zastava automobili". Već 1955. počinje proizvodnja licencnog FIAT-a — početak srpske automobilske industrije.</p>
+                </article>
+
+                <article class="t-item">
+                    <span class="t-item__year">1976</span>
+                    <h3 class="t-item__title">Univerzitet</h3>
+                    <p>Osnivanje Univerziteta u Kragujevcu, danas jedne od vodećih visokoškolskih ustanova u Srbiji sa preko 12.000 studenata.</p>
+                </article>
+
+                <article class="t-item">
+                    <span class="t-item__year">danas</span>
+                    <h3 class="t-item__title">Savremeni grad</h3>
+                    <p>Kragujevac je danas administrativni, privredni, obrazovni i kulturni centar Šumadijskog okruga — grad koji svoje nasleđe spaja sa novom industrijom i mladim duhom.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+ <!-- ───────── REKLAMNI BANER ───────── -->
+    <div class="ad-banner">
+        <div class="ad-banner__inner">
+            <span class="ad-banner__label">Oglas</span>
+            <div class="ad-banner__text">
+                <span class="ad-banner__headline">Mesto za vašu reklamu</span>
+                <span class="ad-banner__sub">Doprite do 11.000+ ljubitelja Kragujevca &middot; Kontakt: moj.kragujevacc@gmail.com</span>
+            </div>
+            <a href="mailto:moj.kragujevacc@gmail.com" class="ad-banner__cta">Zakažite oglas</a>
+        </div>
+    </div>
+    <!-- ───────── ZNAMENITOSTI ───────── -->
+    <section class="landmarks" id="znamenitosti">
+        <div class="landmarks__container">
+            <div class="landmarks__header">
+                <span class="section__chapter">III — Znamenitosti</span>
+                <h2 class="section__title">Šest mesta<br><em>koja</em> morate videti</h2>
+                <p class="section__deck">Od neoklasicističkih palata do industrijskog nasleđa, od memorijalnih parkova do tihih crkava — ovo su mesta gde Kragujevac progovara najjasnije.</p>
+            </div>
+
+            <div class="landmarks__grid">
+
+                <article class="landmark landmark--lg">
+                    <div class="landmark__img" style="background-image: url('images/gallery-4.jpg');">
+                        <span class="landmark__num">01</span>
+                    </div>
+                    <div class="landmark__body">
+                        <span class="landmark__cat">Obrazovanje · 1833</span>
+                        <h3 class="landmark__title">Prva kragujevačka gimnazija</h3>
+                        <p>Najstarija srpska gimnazija, osnovana 1833. godine ukazom kneza Miloša. Sadašnja monumentalna zgrada na Trgu Đure Jakšića podignuta je 1887. u stilu akademskog neoklasicizma. Kroz njene klupe prošli su mnogi srpski naučnici, pisci i državnici. Tragično, ovde je 21. oktobra 1941. odveden veliki broj đaka i profesora — direktno u Šumarice.</p>
+                    </div>
+                </article>
+
+                <article class="landmark">
+                    <div class="landmark__img" style="background-image: url('images/gallery-6.jpg');">
+                        <span class="landmark__num">02</span>
+                    </div>
+                    <div class="landmark__body">
+                        <span class="landmark__cat">Sakralno · 1818</span>
+                        <h3 class="landmark__title">Saborna crkva</h3>
+                        <p>Stara crkva Svetog kneza Lazara — prva podignuta u Kragujevcu po dolasku kneza Miloša. Mesto gde je krunisan, ženio se i sahranjen veliki deo srpske vladajuće porodice 19. veka.</p>
+                    </div>
+                </article>
+
+                <article class="landmark">
+                    <div class="landmark__img" style="background-image: url('images/stari-arsenal.jpg');">
+                        <span class="landmark__num">03</span>
+                    </div>
+                    <div class="landmark__body">
+                        <span class="landmark__cat">Industrijsko nasleđe · 1851</span>
+                        <h3 class="landmark__title">Stari (Knjaževsko-srpski) Arsenal</h3>
+                        <p>Kompleks od preko 30 hektara — kolevka srpske industrije. Danas se polako pretvara u kreativni i kulturni distrikt, sa galerijama, muzejima i događajima.</p>
+                    </div>
+                </article>
+
+                <article class="landmark">
+                    <div class="landmark__img" style="background-image: url('images/sumarice.jpg');">
+                        <span class="landmark__num">04</span>
+                    </div>
+                    <div class="landmark__body">
+                        <span class="landmark__cat">Memorijal · 1981</span>
+                        <h3 class="landmark__title">Spomenik „Kameni cvet"</h3>
+                        <p>Monumentalno delo vajara Miodraga Živkovića, simbol slomljenog života i prkosa. Stoji u Spomen-parku „Kragujevački oktobar".</p>
+                    </div>
+                </article>
+
+                <article class="landmark">
+                    <div class="landmark__img" style="background-image: url('images/gallery-5.jpg');">
+                        <span class="landmark__num">05</span>
+                    </div>
+                    <div class="landmark__body">
+                        <span class="landmark__cat">Muzej · 1976</span>
+                        <h3 class="landmark__title">Muzej „21. oktobar"</h3>
+                        <p>Antiratni muzej brutalističke arhitekture, sa 33 staklene kocke koje predstavljaju 33 streljana mesta. Ispred njega — skulptura „Bol i prkos".</p>
+                    </div>
+                </article>
+
+                <article class="landmark landmark--lg">
+                    <div class="landmark__img" style="background-image: url('images/veliki-park.jpg');">
+                        <span class="landmark__num">06</span>
+                    </div>
+                    <div class="landmark__body">
+                        <span class="landmark__cat">Priroda u gradu · 1898</span>
+                        <h3 class="landmark__title">Veliki park</h3>
+                        <p>Pluća grada — oaza zelenila u samom centru, podignuta krajem 19. veka kao deo opšteg uređenja prestoničkog Kragujevca. Pergola koja deli aleje, redovi platanа i lipe, kafane sa vekovnom tradicijom — Veliki park je mesto gde Kragujevac diše. Generacije đaka i studenata ovde su pisale svoje prve ljubavne pesme i polagale prve ispite života.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────── ŠUMARICE ───────── -->
+    <section class="sumarice" id="sumarice">
+        <div class="sumarice__bg" style="background-image: url('images/sumarice.jpg');"></div>
+        <div class="sumarice__overlay"></div>
+
+        <div class="sumarice__container">
+            <span class="section__chapter section__chapter--light">IV — Sećanje</span>
+            <h2 class="sumarice__title">
+                Krvava bajka<br>
+                <em>i kameni cvet</em>
+            </h2>
+
+            <blockquote class="sumarice__quote">
+                <p>„Bilo je to u nekoj zemlji seljaka<br>
+                na brdovitom Balkanu,<br>
+                umrla je mučeničkom smrću<br>
+                četa đaka<br>
+                u jednom danu."</p>
+                <cite>— Desanka Maksimović, <em>Krvava bajka</em></cite>
+            </blockquote>
+
+            <div class="sumarice__text">
+                <p>Dvadeset prvog oktobra 1941. godine, kao odmazdu za partizanski napad, nemački okupator je u Šumaricama, na obodu Kragujevca, izvršio masovno streljanje. Po procenama, život je izgubilo <strong>oko 2.800 ljudi</strong>, a među žrtvama su bili i <strong>đaci kragujevačke gimnazije</strong>, izvedeni pravo iz školskih klupa.</p>
+
+                <p>Danas se na tom mestu prostire <strong>Spomen-park „Kragujevački oktobar"</strong> — 352 hektara šume, 10 spomenika i muzej koji svedoče o najmračnijem danu u istoriji grada. „Kameni cvet" Miodraga Živkovića, podignut 1981, postao je simbol ne samo Kragujevca, već i univerzalne ljudske patnje i prkosa.</p>
+
+                <p>Svake godine, 21. oktobra, grad staje. Đaci, građani, državnici. Cveće. Tišina koja govori glasnije od svake besede.</p>
+            </div>
+
+            <div class="sumarice__numbers">
+                <div class="sumarice__num">
+                    <span class="sumarice__num-big">2,796</span>
+                    <span class="sumarice__num-lbl">stradalih</span>
+                </div>
+                <div class="sumarice__num">
+                    <span class="sumarice__num-big">352</span>
+                    <span class="sumarice__num-lbl">hektara parka</span>
+                </div>
+                <div class="sumarice__num">
+                    <span class="sumarice__num-big">10</span>
+                    <span class="sumarice__num-lbl">spomenika</span>
+                </div>
+                <div class="sumarice__num">
+                    <span class="sumarice__num-big">21.X</span>
+                    <span class="sumarice__num-lbl">dan sećanja</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────── BROJKE ───────── -->
+    <section class="numbers">
+        <div class="numbers__container">
+            <span class="section__chapter">V — U brojkama</span>
+            <h2 class="section__title">Kragujevac<br><em>danas</em></h2>
+
+            <div class="numbers__grid">
+                <div class="numb">
+                    <span class="numb__big">150,835</span>
+                    <span class="numb__lbl">stanovnika u širem gradskom području</span>
+                </div>
+                <div class="numb">
+                    <span class="numb__big">835 km²</span>
+                    <span class="numb__lbl">površina administrativnog područja</span>
+                </div>
+                <div class="numb">
+                    <span class="numb__big">5</span>
+                    <span class="numb__lbl">gradskih opština na teritoriji grada</span>
+                </div>
+                <div class="numb">
+                    <span class="numb__big">12+</span>
+                    <span class="numb__lbl">hiljada studenata na Univerzitetu</span>
+                </div>
+                <div class="numb">
+                    <span class="numb__big">12</span>
+                    <span class="numb__lbl">fakulteta u sastavu Univerziteta</span>
+                </div>
+                <div class="numb">
+                    <span class="numb__big">€2.5B+</span>
+                    <span class="numb__lbl">vrednost FCA / Stellantis investicije</span>
+                </div>
+                <div class="numb">
+                    <span class="numb__big">200+</span>
+                    <span class="numb__lbl">godina kontinuirane gradske istorije</span>
+                </div>
+                <div class="numb">
+                    <span class="numb__big">№ 4</span>
+                    <span class="numb__lbl">grad po veličini u Republici Srbiji</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────── MARQUEE REKLAMA ───────── -->
+    <div class="ad-marquee" aria-hidden="true">
+        <div class="ad-marquee__track">
+            <span class="ad-marquee__item"><strong>Oglas</strong> Mesto za vašu reklamu <span class="ad-marquee__dot"></span></span>
+            <span class="ad-marquee__item">Doprite do hiljade čitalaca iz Kragujevca <span class="ad-marquee__dot"></span></span>
+            <span class="ad-marquee__item"><strong>Oglas</strong> Vaš biznis, ovde <span class="ad-marquee__dot"></span></span>
+            <span class="ad-marquee__item">Kontakt: moj.kragujevacc@gmail.com <span class="ad-marquee__dot"></span></span>
+            <span class="ad-marquee__item"><strong>Oglas</strong> Mesto za vašu reklamu <span class="ad-marquee__dot"></span></span>
+            <span class="ad-marquee__item">Doprite do hiljade čitalaca iz Kragujevca <span class="ad-marquee__dot"></span></span>
+            <span class="ad-marquee__item"><strong>Oglas</strong> Vaš biznis, ovde <span class="ad-marquee__dot"></span></span>
+            <span class="ad-marquee__item">Kontakt: moj.kragujevacc@gmail.com <span class="ad-marquee__dot"></span></span>
+        </div>
+    </div>
+
+    <!-- ───────── GALERIJA ───────── -->
+    <section class="gallery" id="galerija">
+        <div class="gallery__container">
+            <div class="gallery__header">
+                <span class="section__chapter">VI — Galerija</span>
+                <h2 class="section__title">Kragujevac<br><em>kroz objektiv</em></h2>
+                <p class="section__deck">Šest pogleda — šest priča. Grad koji se ne može opisati jednom slikom, jer ih ima previše vredno čuvati.</p>
+            </div>
+
+            <div class="gallery__grid">
+                <figure class="g-item g-item--tall" style="background-image: url('images/hero-kragujevac.jpg');">
+                    <figcaption>Centar grada · Knez Mihailova palata</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('images/gallery-4.jpg');">
+                    <figcaption>Prva gimnazija · Trg Đure Jakšića</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('images/gallery-6.jpg');">
+                    <figcaption>Stara crkva · Svetog kneza Lazara</figcaption>
+                </figure>
+                <figure class="g-item g-item--wide" style="background-image: url('images/stari-arsenal.jpg');">
+                    <figcaption>Stari arsenal · industrijska arheologija</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('images/gallery-5.jpg');">
+                    <figcaption>Muzej „21. oktobar" · Šumarice</figcaption>
+                </figure>
+                <figure class="g-item g-item--wide" style="background-image: url('images/sumarice.jpg');">
+                    <figcaption>Kameni cvet · Miodrag Živković, 1981</figcaption>
+                </figure>
+                <figure class="g-item g-item--tall" style="background-image: url('images/veliki-park.jpg');">
+                    <figcaption>Veliki park · zelena pluća grada</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────── INSTAGRAM CTA ───────── -->
+    <section class="cta">
+        <div class="cta__container">
+            <div class="cta__content">
+                <span class="section__chapter section__chapter--light">VII — Pratite nas</span>
+                <h2 class="cta__title">
+                    Više od <strong>11.000</strong><br>
+                    nas voli ovaj grad.<br>
+                    <em>Pridružite se.</em>
+                </h2>
+
+                <p class="cta__text">Svaki dan, nove fotografije, priče, događaji i lica Kragujevca — na Instagramu @moj.kragujevac. Najveća zajednica zaljubljenika u naš grad.</p>
+
+                <div class="cta__actions">
+                    <a href="https://instagram.com/moj.kragujevac" target="_blank" rel="noopener" class="btn btn--primary">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                        Pratite na Instagramu
+                    </a>
+
+                    <a href="mailto:moj.kragujevacc@gmail.com" class="btn btn--ghost">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        Pošaljite priču
+                    </a>
+                </div>
+
+                <div class="cta__handle">
+                    <span class="cta__handle-at">@</span>
+                    <span class="cta__handle-text">moj.kragujevac</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────── NEWSLETTER ───────── -->
+    <section class="newsletter">
+        <div class="newsletter__container">
+            <div class="newsletter__left">
+                <span class="newsletter__tag">VIII &mdash; Newsletter</span>
+                <h2 class="newsletter__title">Ostanite<br><em>u toku</em></h2>
+                <p class="newsletter__desc">Priče o Kragujevcu, događaji i vesti — jednom nedeljno, direktno u vaš inbox. Bez spama, bez neželjenih poruka.</p>
+            </div>
+            <div class="newsletter__right">
+                <button class="newsletter__btn" id="nlOpenBtn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    Pretplatite se
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <p class="newsletter__hint">Besplatno &middot; Otkažite kad god hoćete</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────── FOOTER ───────── -->
+    <footer class="footer" id="kontakt">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="images/logo.png" alt="Moj Kragujevac" class="footer__logo">
+                    <p class="footer__tagline">Portal posvećen gradu Kragujevcu — njegovoj istoriji, kulturi, prirodi i ljudima koji ga čine onim što jeste.</p>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__head">Sekcije</h4>
+                    <ul>
+                        <li><a href="#o-gradu">O gradu</a></li>
+                        <li><a href="#istorija">Istorija</a></li>
+                        <li><a href="#znamenitosti">Znamenitosti</a></li>
+                        <li><a href="#sumarice">Šumarice</a></li>
+                        <li><a href="#galerija">Galerija</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__head">Kontakt</h4>
+                    <ul>
+                        <li><a href="mailto:moj.kragujevacc@gmail.com">moj.kragujevacc@gmail.com</a></li>
+                        <li><a href="https://instagram.com/moj.kragujevac" target="_blank" rel="noopener">@moj.kragujevac</a></li>
+                        <li>Kragujevac, Srbija</li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__head">Pratite</h4>
+                    <a href="https://instagram.com/moj.kragujevac" target="_blank" rel="noopener" class="footer__social">
+                        <span class="footer__social-num">11k+</span>
+                        <span class="footer__social-lbl">pratilaca na Instagramu</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span class="footer__copy">© 2026 Moj Kragujevac · Sva prava zadržana</span>
+                <span class="footer__motto"><em>„Da se ne zaboravi, da se zauvek pamti."</em></span>
+                <span class="footer__coords">N 44°00′ · E 20°55′</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ───────── NEWSLETTER MODAL ───────── -->
+    <div class="nl-modal" id="nlModal" role="dialog" aria-modal="true" aria-labelledby="nlModalTitle" aria-hidden="true">
+        <div class="nl-modal__backdrop"></div>
+        <div class="nl-modal__box">
+            <span class="nl-modal__deco">@</span>
+            <button class="nl-modal__close" id="nlClose" aria-label="Zatvori">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <span class="nl-modal__label">Newsletter &middot; Moj Kragujevac</span>
+            <h3 class="nl-modal__title" id="nlModalTitle">Priče o gradu<br><em>u vašem inboxu</em></h3>
+            <p class="nl-modal__sub">Jednom nedeljno, bez spama. Isključivo priče, događaji i vesti iz Kragujevca.</p>
+            <form class="nl-modal__form" id="nlForm" novalidate>
+                <input
+                    type="email"
+                    id="nlEmail"
+                    class="nl-modal__input"
+                    placeholder="vasa@email.com"
+                    autocomplete="email"
+                    required
+                >
+                <button type="submit" class="nl-modal__submit">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    Pretplatite se
+                </button>
+            </form>
+            <p id="nlMsg" class="nl-modal__msg" aria-live="polite"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
