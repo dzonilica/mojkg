@@ -3,24 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Moj Kragujevac — priča o gradu šumadijskog srca, prvoj prestonici moderne Srbije, gradu gimnazije, arsenala, Šumarica i Velikog parka.">
-    <meta name="keywords" content="Kragujevac, Šumadija, prestonica, gimnazija, Šumarice, Stari arsenal, Veliki park, Moj Kragujevac">
-    <meta property="og:title" content="Moj Kragujevac — Srce Šumadije">
-    <meta property="og:description" content="Otkrijte priču o gradu koji je bio prva prestonica moderne Srbije.">
-    <meta property="og:image" content="images/logo.png">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Moj Kragujevac — Srce Šumadije">
-    <meta name="twitter:description" content="Otkrijte priču o gradu koji je bio prva prestonica moderne Srbije.">
-    <meta name="twitter:image" content="images/logo.png">
-    <title>Moj Kragujevac — Srce Šumadije</title>
 
+    <!-- ── SEO ─────────────────────────────────── -->
+    <title>Moj Kragujevac — Srce Šumadije | Istorija, znamenitosti i kultura</title>
+    <meta name="description" content="Moj Kragujevac — portal o prvoj prestonici moderne Srbije. Otkrijte istoriju, Sretenjski ustav, Šumarice, znamenitosti i kulturno nasleđe Kragujevca i Šumadije.">
+    <meta name="keywords" content="Kragujevac, Šumadija, prestonica Srbije, Sretenjski ustav 1835, Šumarice, Stari arsenal, Veliki park, Moj Kragujevac, istorija Kragujevca, znamenitosti Kragujevca">
+    <meta name="author" content="Moj Kragujevac">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#6B1E1E">
+    <link rel="canonical" href="https://mojkragujevac.com/">
+
+    <!-- ── Open Graph ──────────────────────────── -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mojkragujevac.com/">
+    <meta property="og:site_name" content="Moj Kragujevac">
+    <meta property="og:title" content="Moj Kragujevac — Srce Šumadije">
+    <meta property="og:description" content="Portal o prvoj prestonici moderne Srbije. Istorija, Sretenjski ustav, Šumarice i kulturno nasleđe Kragujevca.">
+    <meta property="og:image" content="https://mojkragujevac.com/images/hero-kragujevac.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Panorama Kragujevca — Srce Šumadije">
+    <meta property="og:locale" content="sr_RS">
+
+    <!-- ── Twitter Card ────────────────────────── -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mojkragujevac">
+    <meta name="twitter:title" content="Moj Kragujevac — Srce Šumadije">
+    <meta name="twitter:description" content="Portal o prvoj prestonici moderne Srbije. Istorija, Sretenjski ustav, Šumarice i kulturno nasleđe Kragujevca.">
+    <meta name="twitter:image" content="https://mojkragujevac.com/images/hero-kragujevac.jpg">
+    <meta name="twitter:image:alt" content="Panorama Kragujevca — Srce Šumadije">
+
+    <!-- ── Icons ───────────────────────────────── -->
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- ── Performance ─────────────────────────── -->
+    <link rel="preload" as="image" href="images/hero-kragujevac.jpg" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
+
+    <!-- ── Structured Data (JSON-LD) ───────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://mojkragujevac.com/#website",
+          "url": "https://mojkragujevac.com/",
+          "name": "Moj Kragujevac",
+          "description": "Portal posvećen gradu Kragujevcu — istoriji, kulturi, prirodi i stanovnicima",
+          "inLanguage": "sr",
+          "publisher": { "@id": "https://mojkragujevac.com/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://mojkragujevac.com/#organization",
+          "name": "Moj Kragujevac",
+          "url": "https://mojkragujevac.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mojkragujevac.com/images/logo.png",
+            "width": 512,
+            "height": 512
+          },
+          "sameAs": ["https://www.instagram.com/moj.kragujevac/"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "moj.kragujevacc@gmail.com",
+            "contactType": "editorial",
+            "availableLanguage": "Serbian"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://mojkragujevac.com/#webpage",
+          "url": "https://mojkragujevac.com/",
+          "name": "Moj Kragujevac — Srce Šumadije | Istorija, znamenitosti i kultura",
+          "description": "Portal o prvoj prestonici moderne Srbije. Istorija, Sretenjski ustav, Šumarice i kulturno nasleđe Kragujevca.",
+          "isPartOf": { "@id": "https://mojkragujevac.com/#website" },
+          "about": { "@id": "https://mojkragujevac.com/#city" },
+          "publisher": { "@id": "https://mojkragujevac.com/#organization" },
+          "inLanguage": "sr",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://mojkragujevac.com/images/hero-kragujevac.jpg",
+            "width": 1200,
+            "height": 630
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Moj Kragujevac",
+              "item": "https://mojkragujevac.com/"
+            }]
+          }
+        },
+        {
+          "@type": "City",
+          "@id": "https://mojkragujevac.com/#city",
+          "name": "Kragujevac",
+          "alternateName": ["Крагујевац", "Srce Šumadije"],
+          "description": "Kragujevac je grad u centralnoj Srbiji, administrativni centar Šumadijskog okruga i prva prestonica moderne Kneževine Srbije (1818–1841). Poznat po Sretenjskom ustavu (1835), tragičnim Šumaricama (1941) i industrijskom nasleđu.",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "44.0165",
+            "longitude": "20.9114"
+          },
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Srbija",
+            "sameAs": "https://www.wikidata.org/wiki/Q403"
+          },
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q82657",
+            "https://dbpedia.org/resource/Kragujevac"
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Znamenitosti Kragujevca",
+          "description": "Ključne kulturne, istorijske i prirodne znamenitosti grada Kragujevca",
+          "numberOfItems": 6,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "LandmarksOrHistoricalBuildings",
+                "name": "Prva kragujevačka gimnazija",
+                "description": "Najstarija srpska gimnazija, osnovana 1833. ukazom kneza Miloša Obrenovića. Monumentalna zgrada na Trgu Đure Jakšića podignuta 1887. u stilu akademskog neoklasicizma.",
+                "foundingDate": "1833",
+                "image": "https://mojkragujevac.com/images/gallery-4.jpg",
+                "address": { "@type": "PostalAddress", "streetAddress": "Trg Đure Jakšića bb", "addressLocality": "Kragujevac", "postalCode": "34000", "addressCountry": "RS" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "LandmarksOrHistoricalBuildings",
+                "name": "Saborna crkva Svetog kneza Lazara",
+                "description": "Prva crkva podignuta u Kragujevcu po dolasku kneza Miloša, 1818. godine.",
+                "foundingDate": "1818",
+                "image": "https://mojkragujevac.com/images/gallery-6.jpg",
+                "address": { "@type": "PostalAddress", "addressLocality": "Kragujevac", "addressCountry": "RS" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "LandmarksOrHistoricalBuildings",
+                "name": "Stari Arsenal — Knjaževsko-srpski arsenal",
+                "description": "Kompleks od 30+ hektara — kolevka srpske industrije, osnovan 1851. Danas kreativni i kulturni distrikt Kragujevca.",
+                "foundingDate": "1851",
+                "image": "https://mojkragujevac.com/images/stari-arsenal.jpg",
+                "address": { "@type": "PostalAddress", "addressLocality": "Kragujevac", "addressCountry": "RS" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "LandmarksOrHistoricalBuildings",
+                "name": "Kameni cvet — Spomen-park Šumarice",
+                "description": "Monumentalna skulptura vajara Miodraga Živkovića (1981) u Spomen-parku Kragujevački oktobar, na mestu stradanja 2.796 žrtava nacizma 21. oktobra 1941.",
+                "image": "https://mojkragujevac.com/images/sumarice.jpg",
+                "address": { "@type": "PostalAddress", "addressLocality": "Kragujevac", "addressCountry": "RS" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "LandmarksOrHistoricalBuildings",
+                "name": "Muzej 21. oktobar",
+                "description": "Antiratni muzej brutalističke arhitekture sa 33 staklene kocke koje simbolizuju 33 streljana mesta. Osnovan 1976.",
+                "foundingDate": "1976",
+                "image": "https://mojkragujevac.com/images/gallery-5.jpg",
+                "address": { "@type": "PostalAddress", "addressLocality": "Kragujevac", "addressCountry": "RS" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "LandmarksOrHistoricalBuildings",
+                "name": "Veliki park",
+                "description": "Centralni gradski park Kragujevca, podignut krajem 19. veka. Pluća grada — oaza platana, lipa i historijskih aleja.",
+                "foundingDate": "1898",
+                "image": "https://mojkragujevac.com/images/veliki-park.jpg",
+                "address": { "@type": "PostalAddress", "addressLocality": "Kragujevac", "addressCountry": "RS" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -55,9 +241,11 @@
         </div>
     </nav>
 
+    <main id="main-content" tabindex="-1">
+
     <!-- ───────── HERO ───────── -->
-    <header class="hero">
-        <div class="hero__bg" style="background-image: url('images/hero-kragujevac.jpg');"></div>
+    <header class="hero" aria-label="Naslovna — Kragujevac, Srce Šumadije">
+        <div class="hero__bg" style="background-image: url('images/hero-kragujevac.jpg');" role="img" aria-label="Panorama Kragujevca — nekadašnje prestonice Srbije"></div>
         <div class="hero__overlay"></div>
 
         <div class="hero__content">
@@ -109,11 +297,11 @@
    
 
     <!-- ───────── O GRADU ───────── -->
-    <section class="intro" id="o-gradu">
+    <section class="intro" id="o-gradu" aria-labelledby="intro-heading">
         <div class="intro__container">
             <div class="intro__header">
                 <span class="section__chapter">I — Uvod</span>
-                <h2 class="section__title">Prestonica<br><em>koja je</em> stvorila<br>Srbiju</h2>
+                <h2 class="section__title" id="intro-heading">Prestonica<br><em>koja je</em> stvorila<br>Srbiju</h2>
             </div>
 
             <div class="intro__body">
@@ -152,11 +340,11 @@
     </section>
 
     <!-- ───────── ISTORIJA TIMELINE ───────── -->
-    <section class="timeline" id="istorija">
+    <section class="timeline" id="istorija" aria-labelledby="timeline-heading">
         <div class="timeline__container">
             <div class="timeline__header">
                 <span class="section__chapter">II — Hronologija</span>
-                <h2 class="section__title">Pet vekova<br><em>upisanih</em> u kamen</h2>
+                <h2 class="section__title" id="timeline-heading">Pet vekova<br><em>upisanih</em> u kamen</h2>
                 <p class="section__deck">Od prvih turskih deftera do savremenog univerzitetskog grada — Kragujevac je hronika u koju je upisano pet stoleća srpske istorije.</p>
             </div>
 
@@ -231,11 +419,11 @@
         </div>
     </div>
     <!-- ───────── ZNAMENITOSTI ───────── -->
-    <section class="landmarks" id="znamenitosti">
+    <section class="landmarks" id="znamenitosti" aria-labelledby="landmarks-heading">
         <div class="landmarks__container">
             <div class="landmarks__header">
                 <span class="section__chapter">III — Znamenitosti</span>
-                <h2 class="section__title">Šest mesta<br><em>koja</em> morate videti</h2>
+                <h2 class="section__title" id="landmarks-heading">Šest mesta<br><em>koja</em> morate videti</h2>
                 <p class="section__deck">Od neoklasicističkih palata do industrijskog nasleđa, od memorijalnih parkova do tihih crkava — ovo su mesta gde Kragujevac progovara najjasnije.</p>
             </div>
 
@@ -419,11 +607,11 @@
     </div>
 
     <!-- ───────── GALERIJA ───────── -->
-    <section class="gallery" id="galerija">
+    <section class="gallery" id="galerija" aria-labelledby="gallery-heading">
         <div class="gallery__container">
             <div class="gallery__header">
                 <span class="section__chapter">VI — Galerija</span>
-                <h2 class="section__title">Kragujevac<br><em>kroz objektiv</em></h2>
+                <h2 class="section__title" id="gallery-heading">Kragujevac<br><em>kroz objektiv</em></h2>
                 <p class="section__deck">Šest pogleda — šest priča. Grad koji se ne može opisati jednom slikom, jer ih ima previše vredno čuvati.</p>
             </div>
 
@@ -506,6 +694,8 @@
             </div>
         </div>
     </section>
+
+    </main><!-- /#main-content -->
 
     <!-- ───────── FOOTER ───────── -->
     <footer class="footer" id="kontakt">

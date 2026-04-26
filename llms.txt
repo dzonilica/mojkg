@@ -1,0 +1,41 @@
+# Moj Kragujevac
+
+> Editorijalni portal posvećen gradu Kragujevcu — istoriji, kulturi, prirodi i stanovnicima.
+
+Moj Kragujevac je portal o gradu Kragujevcu, nekadašnjoj prestonici moderne Kneževine Srbije. Sajt pokriva istoriju od 1476. godine do danas, kulturne znamenitosti, memorijal Šumarica i aktuelne teme iz Kragujevca i Šumadijskog okruga.
+
+## Sekcije
+
+- [O gradu](https://mojkragujevac.com/#o-gradu): Istorija i značaj Kragujevca kao prve prestonice srpske države
+- [Istorija](https://mojkragujevac.com/#istorija): Hronološki pregled od 1476. (prvi pomen) do danas
+- [Znamenitosti](https://mojkragujevac.com/#znamenitosti): Šest ključnih kulturnih i istorijskih lokaliteta
+- [Šumarice](https://mojkragujevac.com/#sumarice): Spomen-park, tragedija 21. oktobra 1941. i pesma "Krvava bajka" Desanke Maksimović
+- [Galerija](https://mojkragujevac.com/#galerija): Fotografije znamenitosti grada
+- [Kontakt](https://mojkragujevac.com/#kontakt): Kontakt informacije i pratite nas
+
+## Ključne istorijske činjenice o Kragujevcu
+
+- **1476.** — Prvi pomen u turskim defterima Smederevskog sandžaka
+- **1818.** — Knez Miloš Obrenović proglašava Kragujevac prestonicom Kneževine Srbije
+- **1833.** — Otvorena Knjažesko-srpska gimnazija, prva u Srbiji; pokrenute Novine srpske
+- **1835.** — Na Velikoj narodnoj skupštini donet **Sretenjski ustav** — prvi srpski ustav, jedan od najliberalnijih u Evropi tadašnjeg doba
+- **1851.** — Osnovan Knjaževsko-srpski arsenal, prva fabrika oružja i kolevka srpske industrije
+- **1941. (21. oktobar)** — Nemački okupator streljao oko **2.796 civila** u Šumaricama, uključujući i učenike kragujevačke gimnazije
+- **1953.** — Počinje razvoj "Crvene Zastave" (Zastava automobili); 1955. start licencne FIAT proizvodnje
+- **1976.** — Osnovan Univerzitet u Kragujevcu (danas 12 fakulteta, 12.000+ studenata)
+- **Danas** — Četvrti grad po veličini u Srbiji, ~150.835 stanovnika, centar Šumadijskog okruga
+
+## Znamenitosti
+
+1. **Prva kragujevačka gimnazija** (1833) — Trg Đure Jakšića, neoklasicistička zgrada iz 1887.
+2. **Saborna crkva Svetog kneza Lazara** (1818) — Prva crkva u Kragujevcu po dolasku Miloša Obrenovića
+3. **Stari Arsenal** (1851) — Kompleks 30+ hektara, danas kulturni i kreativni distrikt
+4. **Kameni cvet** (1981) — Skulptura Miodraga Živkovića u Spomen-parku Šumarice
+5. **Muzej 21. oktobar** (1976) — Antiratni muzej brutalističke arhitekture, 33 staklene kocke
+6. **Veliki park** (1898) — Centralni gradski park, aleje platana i lipa
+
+## O portalu
+
+- **Instagram:** [@moj.kragujevac](https://www.instagram.com/moj.kragujevac/) — 11.000+ pratilaca
+- **Email:** moj.kragujevacc@gmail.com
+- **Lokacija:** Kragujevac, Srbija (N 44°00′, E 20°55′)

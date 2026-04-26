@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /nl-modal
+
+# Sitemap
+Sitemap: https://mojkragujevac.com/sitemap.xml
+
+# AI crawlers — dozvoljeni za citiranje
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
