@@ -133,71 +133,218 @@
         }, { passive: true });
     }
 
-    // ─── Newsletter modal ────────────────────────
-    const nlModal   = document.getElementById('nlModal');
-    const nlOpenBtn = document.getElementById('nlOpenBtn');
-    const nlClose   = document.getElementById('nlClose');
-    const nlForm    = document.getElementById('nlForm');
-    const nlEmail   = document.getElementById('nlEmail');
-    const nlMsg     = document.getElementById('nlMsg');
+    // ─── Newsletter modal (samo na stranicama koje ga imaju) ───
+    const nlModal = document.getElementById('nlModal');
+    if (nlModal) {
+        const nlOpenBtn = document.getElementById('nlOpenBtn');
+        const nlClose   = document.getElementById('nlClose');
+        const nlForm    = document.getElementById('nlForm');
+        const nlEmail   = document.getElementById('nlEmail');
+        const nlMsg     = document.getElementById('nlMsg');
 
-    const NL_KEY = 'mk_newsletter_v1';
+        const NL_KEY = 'mk_newsletter_v1';
 
-    function nlGetAll() {
-        try { return JSON.parse(localStorage.getItem(NL_KEY)) || []; }
-        catch { return []; }
-    }
-
-    function nlSave(email) {
-        const list = nlGetAll();
-        if (list.some(e => e.email.toLowerCase() === email.toLowerCase())) return false;
-        list.push({ email, ts: new Date().toISOString() });
-        localStorage.setItem(NL_KEY, JSON.stringify(list));
-        return true;
-    }
-
-    function nlOpen() {
-        nlModal.classList.add('open');
-        nlModal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        nlMsg.textContent = '';
-        nlMsg.className = 'nl-modal__msg';
-        nlEmail.value = '';
-        setTimeout(() => nlEmail.focus(), 420);
-    }
-
-    function nlClose2() {
-        nlModal.classList.remove('open');
-        nlModal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    }
-
-    if (nlOpenBtn) nlOpenBtn.addEventListener('click', nlOpen);
-    if (nlClose)   nlClose.addEventListener('click', nlClose2);
-    nlModal.querySelector('.nl-modal__backdrop').addEventListener('click', nlClose2);
-
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && nlModal.classList.contains('open')) nlClose2();
-    });
-
-    nlForm.addEventListener('submit', e => {
-        e.preventDefault();
-        const val = nlEmail.value.trim();
-        const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRe.test(val)) {
-            nlMsg.className = 'nl-modal__msg nl-modal__msg--error';
-            nlMsg.textContent = '⚠ Unesite ispravnu email adresu.';
-            return;
+        function nlGetAll() {
+            try { return JSON.parse(localStorage.getItem(NL_KEY)) || []; }
+            catch { return []; }
         }
-        if (nlSave(val)) {
-            nlMsg.className = 'nl-modal__msg nl-modal__msg--success';
-            nlMsg.textContent = '✓ Uspešno ste se pretplatili! Hvala vam.';
-            setTimeout(nlClose2, 2200);
-        } else {
-            nlMsg.className = 'nl-modal__msg nl-modal__msg--error';
-            nlMsg.textContent = '⚠ Ova adresa je već registrovana.';
+
+        function nlSave(email) {
+            const list = nlGetAll();
+            if (list.some(e => e.email.toLowerCase() === email.toLowerCase())) return false;
+            list.push({ email, ts: new Date().toISOString() });
+            localStorage.setItem(NL_KEY, JSON.stringify(list));
+            return true;
         }
-    });
+
+        function nlOpen() {
+            nlModal.classList.add('open');
+            nlModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            nlMsg.textContent = '';
+            nlMsg.className = 'nl-modal__msg';
+            nlEmail.value = '';
+            setTimeout(() => nlEmail.focus(), 420);
+        }
+
+        function nlClose2() {
+            nlModal.classList.remove('open');
+            nlModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        if (nlOpenBtn) nlOpenBtn.addEventListener('click', nlOpen);
+        if (nlClose)   nlClose.addEventListener('click', nlClose2);
+        nlModal.querySelector('.nl-modal__backdrop').addEventListener('click', nlClose2);
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && nlModal.classList.contains('open')) nlClose2();
+        });
+
+        nlForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const val = nlEmail.value.trim();
+            const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRe.test(val)) {
+                nlMsg.className = 'nl-modal__msg nl-modal__msg--error';
+                nlMsg.textContent = '⚠ Unesite ispravnu email adresu.';
+                return;
+            }
+            if (nlSave(val)) {
+                nlMsg.className = 'nl-modal__msg nl-modal__msg--success';
+                nlMsg.textContent = '✓ Uspešno ste se pretplatili! Hvala vam.';
+                setTimeout(nlClose2, 2200);
+            } else {
+                nlMsg.className = 'nl-modal__msg nl-modal__msg--error';
+                nlMsg.textContent = '⚠ Ova adresa je već registrovana.';
+            }
+        });
+    }
+
+    // ─── Lightbox galerija ──────────────────────
+    (function initLightbox() {
+        const items = Array.from(document.querySelectorAll('[data-lightbox]'));
+        if (!items.length) return;
+
+        const lb = document.createElement('div');
+        lb.id = 'lightbox';
+        lb.className = 'lightbox';
+        lb.setAttribute('role', 'dialog');
+        lb.setAttribute('aria-modal', 'true');
+        lb.setAttribute('aria-hidden', 'true');
+        lb.innerHTML = `
+            <div class="lightbox__backdrop"></div>
+            <button class="lightbox__close" aria-label="Zatvori">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <button class="lightbox__prev" aria-label="Prethodna">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="lightbox__next" aria-label="Sledeća">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <figure class="lightbox__figure">
+                <img class="lightbox__img" src="" alt="">
+                <figcaption class="lightbox__caption"></figcaption>
+            </figure>
+            <div class="lightbox__counter"></div>
+        `;
+        document.body.appendChild(lb);
+
+        let current = 0;
+        const lbImg     = lb.querySelector('.lightbox__img');
+        const lbCaption = lb.querySelector('.lightbox__caption');
+        const lbCounter = lb.querySelector('.lightbox__counter');
+
+        function show(index) {
+            const item = items[index];
+            const src  = item.dataset.src;
+            const cap  = item.dataset.caption || '';
+            lbImg.classList.add('loading');
+            lbImg.onload = () => lbImg.classList.remove('loading');
+            lbImg.src = src;
+            lbImg.alt = cap;
+            lbCaption.textContent = cap;
+            lbCounter.textContent = (index + 1) + ' / ' + items.length;
+            current = index;
+            const single = items.length <= 1;
+            lb.querySelector('.lightbox__prev').style.display = single ? 'none' : '';
+            lb.querySelector('.lightbox__next').style.display = single ? 'none' : '';
+        }
+
+        function openLb(index) {
+            show(index);
+            lb.classList.add('open');
+            lb.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLb() {
+            lb.classList.remove('open');
+            lb.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        items.forEach(function (item, i) {
+            item.addEventListener('click', function () { openLb(i); });
+            item.setAttribute('tabindex', '0');
+            item.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') openLb(i);
+            });
+        });
+
+        lb.querySelector('.lightbox__backdrop').addEventListener('click', closeLb);
+        lb.querySelector('.lightbox__close').addEventListener('click', closeLb);
+        lb.querySelector('.lightbox__prev').addEventListener('click', function () {
+            show((current - 1 + items.length) % items.length);
+        });
+        lb.querySelector('.lightbox__next').addEventListener('click', function () {
+            show((current + 1) % items.length);
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') closeLb();
+            if (e.key === 'ArrowLeft')  show((current - 1 + items.length) % items.length);
+            if (e.key === 'ArrowRight') show((current + 1) % items.length);
+        });
+    })();
+
+    // ─── Timeline: collapsible dropdown(s) ──────
+    function initCollapsibleTimeline(wrapId, btnId, labelClass, collapsedMax, scrollAnchorId) {
+        const wrap = document.getElementById(wrapId);
+        const btn = document.getElementById(btnId);
+        if (!wrap || !btn) return;
+
+        const label = btn.querySelector(labelClass);
+        const showText = label.dataset.show;
+        const hideText = label.dataset.hide;
+
+        wrap.style.maxHeight = collapsedMax;
+
+        function expand() {
+            wrap.classList.remove('is-collapsed');
+            wrap.style.maxHeight = wrap.scrollHeight + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+            label.textContent = hideText;
+        }
+
+        function collapse() {
+            wrap.style.maxHeight = wrap.scrollHeight + 'px';
+            requestAnimationFrame(() => {
+                wrap.classList.add('is-collapsed');
+                wrap.style.maxHeight = collapsedMax;
+            });
+            btn.setAttribute('aria-expanded', 'false');
+            label.textContent = showText;
+            const anchor = scrollAnchorId ? document.getElementById(scrollAnchorId) : null;
+            if (anchor && anchor.getBoundingClientRect().top < 0) {
+                anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        wrap.addEventListener('transitionend', (e) => {
+            if (e.propertyName !== 'max-height') return;
+            if (!wrap.classList.contains('is-collapsed')) {
+                wrap.style.maxHeight = 'none';
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (!wrap.classList.contains('is-collapsed')) {
+                wrap.style.maxHeight = 'none';
+            }
+        });
+
+        btn.addEventListener('click', () => {
+            if (wrap.classList.contains('is-collapsed')) expand();
+            else collapse();
+        });
+    }
+
+    initCollapsibleTimeline('timelineCollapsible', 'timelineToggle', '.timeline__toggle-text', '22rem', 'istorija');
+    initCollapsibleTimeline('bigTimelineCollapsible', 'bigTimelineToggle', '.big-timeline__toggle-text', '32rem', 'hronologija');
+    initCollapsibleTimeline('factsCollapsible', 'factsToggle', '.facts__toggle-text', '26rem', 'zanimljivosti');
 
     // ─── Console paskha (jer si Nikola haker) ──
     console.log(

@@ -4,10 +4,50 @@
 
   <url>
     <loc>https://mojkragujevac.com/</loc>
-    <lastmod>2026-04-26</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://mojkragujevac.com/"/>
+  </url>
+
+  <url>
+    <loc>https://mojkragujevac.com/istorija.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://mojkragujevac.com/istorija.html"/>
+  </url>
+
+  <url>
+    <loc>https://mojkragujevac.com/sumarice.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://mojkragujevac.com/sumarice.html"/>
+  </url>
+
+  <url>
+    <loc>https://mojkragujevac.com/vesti.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://mojkragujevac.com/vesti.html"/>
+  </url>
+
+  <url>
+    <loc>https://mojkragujevac.com/galerija.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://mojkragujevac.com/galerija.html"/>
+  </url>
+
+  <url>
+    <loc>https://mojkragujevac.com/kontakt.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://mojkragujevac.com/kontakt.html"/>
   </url>
 
 </urlset>

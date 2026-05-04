@@ -223,11 +223,12 @@
 
             <ul class="nav__menu" id="navMenu">
                 <li><a href="#o-gradu">O gradu</a></li>
-                <li><a href="#istorija">Istorija</a></li>
+                <li><a href="istorija.html">Istorija</a></li>
                 <li><a href="#znamenitosti">Znamenitosti</a></li>
-                <li><a href="#sumarice">Šumarice</a></li>
-                <li><a href="#galerija">Galerija</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="sumarice.html">Šumarice</a></li>
+                <li><a href="vesti.html">Vesti</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
 
             <a href="https://instagram.com/moj.kragujevac" target="_blank" rel="noopener" class="nav__cta">
@@ -279,13 +280,7 @@
                 </div>
             </div>
 
-            <a href="#o-gradu" class="hero__scroll">
-                <span>Skrolujte</span>
-                <svg viewBox="0 0 24 40" width="20" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="2" y="2" width="20" height="36" rx="10"/>
-                    <line x1="12" y1="10" x2="12" y2="18" class="hero__scroll-dot"/>
-                </svg>
-            </a>
+           
         </div>
 
         <div class="hero__corner hero__corner--tl">N 44°00′</div>
@@ -348,6 +343,7 @@
                 <p class="section__deck">Od prvih turskih deftera do savremenog univerzitetskog grada — Kragujevac je hronika u koju je upisano pet stoleća srpske istorije.</p>
             </div>
 
+            <div class="timeline__collapsible is-collapsed" id="timelineCollapsible">
             <div class="timeline__track">
                 <div class="timeline__line"></div>
 
@@ -404,6 +400,24 @@
                     <h3 class="t-item__title">Savremeni grad</h3>
                     <p>Kragujevac je danas administrativni, privredni, obrazovni i kulturni centar Šumadijskog okruga — grad koji svoje nasleđe spaja sa novom industrijom i mladim duhom.</p>
                 </article>
+            </div>
+            </div>
+
+            <div class="timeline__toggle-wrap">
+                <button type="button" class="timeline__toggle" id="timelineToggle"
+                        aria-expanded="false" aria-controls="timelineCollapsible">
+                    <span class="timeline__toggle-text" data-show="Prikaži celu hronologiju" data-hide="Sakupi hronologiju">Prikaži celu hronologiju</span>
+                    <svg class="timeline__toggle-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="timeline__more">
+                <a href="istorija.html" class="timeline__more-link">
+                    <span>Cela istorija grada i zanimljivosti</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -546,6 +560,13 @@
                     <span class="sumarice__num-lbl">dan sećanja</span>
                 </div>
             </div>
+
+            <div class="sumarice__more">
+                <a href="sumarice.html" class="sumarice__more-link">
+                    <span>Cela „Krvava bajka" i priča o muzeju</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -616,26 +637,65 @@
             </div>
 
             <div class="gallery__grid">
-                <figure class="g-item g-item--tall" style="background-image: url('images/hero-kragujevac.jpg');">
+                <figure class="g-item g-item--tall" style="background-image: url('images/hero-kragujevac.jpg');"
+                    data-lightbox data-src="images/hero-kragujevac.jpg" data-caption="Centar grada · Knez Mihailova palata"
+                    role="button" aria-label="Otvori sliku: Centar grada">
                     <figcaption>Centar grada · Knez Mihailova palata</figcaption>
                 </figure>
-                <figure class="g-item" style="background-image: url('images/gallery-4.jpg');">
+                <figure class="g-item" style="background-image: url('images/gallery-4.jpg');"
+                    data-lightbox data-src="images/gallery-4.jpg" data-caption="Prva gimnazija · Trg Đure Jakšića"
+                    role="button" aria-label="Otvori sliku: Prva gimnazija">
                     <figcaption>Prva gimnazija · Trg Đure Jakšića</figcaption>
                 </figure>
-                <figure class="g-item" style="background-image: url('images/gallery-6.jpg');">
+                <figure class="g-item" style="background-image: url('images/gallery-6.jpg');"
+                    data-lightbox data-src="images/gallery-6.jpg" data-caption="Stara crkva · Svetog kneza Lazara"
+                    role="button" aria-label="Otvori sliku: Stara crkva">
                     <figcaption>Stara crkva · Svetog kneza Lazara</figcaption>
                 </figure>
-                <figure class="g-item g-item--wide" style="background-image: url('images/stari-arsenal.jpg');">
+                <figure class="g-item g-item--wide" style="background-image: url('noveslike/1920x650-Kragujevac-noc-panorama-autor-Zoran-Lazarevic.jpg');"
+                    data-lightbox data-src="noveslike/1920x650-Kragujevac-noc-panorama-autor-Zoran-Lazarevic.jpg" data-caption="Noćna panorama Kragujevca · foto: Zoran Lazarević"
+                    role="button" aria-label="Otvori sliku: Noćna panorama">
+                    <figcaption>Noćna panorama · foto: Zoran Lazarević</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('images/stari-arsenal.jpg');"
+                    data-lightbox data-src="images/stari-arsenal.jpg" data-caption="Stari arsenal · industrijska arheologija"
+                    role="button" aria-label="Otvori sliku: Stari arsenal">
                     <figcaption>Stari arsenal · industrijska arheologija</figcaption>
                 </figure>
-                <figure class="g-item" style="background-image: url('images/gallery-5.jpg');">
+                <figure class="g-item" style="background-image: url('noveslike/View_on_the_city_of_Kragujevac.jpg');"
+                    data-lightbox data-src="noveslike/View_on_the_city_of_Kragujevac.jpg" data-caption="Pogled na Kragujevac"
+                    role="button" aria-label="Otvori sliku: Pogled na grad">
+                    <figcaption>Pogled na Kragujevac</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('images/gallery-5.jpg');"
+                    data-lightbox data-src="images/gallery-5.jpg" data-caption="Muzej „21. oktobar" · Šumarice"
+                    role="button" aria-label="Otvori sliku: Muzej 21. oktobar">
                     <figcaption>Muzej „21. oktobar" · Šumarice</figcaption>
                 </figure>
-                <figure class="g-item g-item--wide" style="background-image: url('images/sumarice.jpg');">
+                <figure class="g-item g-item--wide" style="background-image: url('images/sumarice.jpg');"
+                    data-lightbox data-src="images/sumarice.jpg" data-caption="Kameni cvet · Miodrag Živković, 1981"
+                    role="button" aria-label="Otvori sliku: Kameni cvet">
                     <figcaption>Kameni cvet · Miodrag Živković, 1981</figcaption>
                 </figure>
-                <figure class="g-item g-item--tall" style="background-image: url('images/veliki-park.jpg');">
+                <figure class="g-item g-item--tall" style="background-image: url('images/veliki-park.jpg');"
+                    data-lightbox data-src="images/veliki-park.jpg" data-caption="Veliki park · zelena pluća grada"
+                    role="button" aria-label="Otvori sliku: Veliki park">
                     <figcaption>Veliki park · zelena pluća grada</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('noveslike/panorama_grada_jovan_zivanovic_gto_a.jpg');"
+                    data-lightbox data-src="noveslike/panorama_grada_jovan_zivanovic_gto_a.jpg" data-caption="Panorama grada · foto: Jovan Živanović"
+                    role="button" aria-label="Otvori sliku: Panorama grada">
+                    <figcaption>Panorama grada · foto: Jovan Živanović</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('noveslike/street-kragujevac-old-historical-town-sunset-kragujevac-largest-town-sumadija-region-serbia-street-kragujevac-164067918.webp');"
+                    data-lightbox data-src="noveslike/street-kragujevac-old-historical-town-sunset-kragujevac-largest-town-sumadija-region-serbia-street-kragujevac-164067918.webp" data-caption="Istorijska ulica pri zalasku sunca"
+                    role="button" aria-label="Otvori sliku: Istorijska ulica">
+                    <figcaption>Istorijska ulica · zalazak sunca</figcaption>
+                </figure>
+                <figure class="g-item" style="background-image: url('noveslike/kragujevac.jpg');"
+                    data-lightbox data-src="noveslike/kragujevac.jpg" data-caption="Kragujevac · srce Šumadije"
+                    role="button" aria-label="Otvori sliku: Kragujevac">
+                    <figcaption>Kragujevac · srce Šumadije</figcaption>
                 </figure>
             </div>
         </div>
@@ -707,13 +767,13 @@
                 </div>
 
                 <div class="footer__col">
-                    <h4 class="footer__head">Sekcije</h4>
+                    <h4 class="footer__head">Stranice</h4>
                     <ul>
                         <li><a href="#o-gradu">O gradu</a></li>
-                        <li><a href="#istorija">Istorija</a></li>
-                        <li><a href="#znamenitosti">Znamenitosti</a></li>
-                        <li><a href="#sumarice">Šumarice</a></li>
-                        <li><a href="#galerija">Galerija</a></li>
+                        <li><a href="istorija.html">Istorija &amp; zanimljivosti</a></li>
+                        <li><a href="sumarice.html">Šumarice</a></li>
+                        <li><a href="vesti.html">Vesti</a></li>
+                        <li><a href="galerija.html">Galerija</a></li>
                     </ul>
                 </div>
 
